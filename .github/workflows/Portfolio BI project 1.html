@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" dir="ltr"> 
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Responsive Navbar | CodingNepal</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+ <style type="text/css" id="dcoder_stylesheet">*{
+  padding: 0;
+  margin: 0;
+  //text-decoration: none;
+  list-style: none;
+  scroll-behavior:smooth;
+  box-sizing: border-box;
+}
+body{
+  font-family: fantasy;
+}
+nav{
+  background:#000;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  font-family: montserrat;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.logo span{
+  color: #cd202d;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  display: none;
+  cursor: pointer;
+}
+#check{
+  display: none;
+}
+.des{
+  margin-top:30px;
+  margin:20px;
+  margin-bottom:10px;
+  padding:10px;
+  padding-bottom:5px;
+  text-align:center;
+  font-family:fantasy;
+  font-size:35px;
+}
+.des span{
+  color:#3c98ff;
+  font-family: cursive;
+}
+.about{
+  margin-top:50px;
+  margin-right:10px;
+  margin-left:10px;
+  letter-spacing:1px;
+  word-spacing:3px;
+  margin-bottom:20px;
+  text-align: center;
+  padding:40px;
+  background:#e6f7ff;
+  border-radius:25px;
+  }
+.head{
+  display:flex;
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+  margin-bottom:25px;
+}
+.head i{
+ margin-right:10px;
+ font-size:25px;
+}
+.head h2{
+  color:#3c98ff;
+  font-weight:bold;
+}
+.about p{
+  font-family: 'poppins',sans-serif;
+  font-size:13px;
+  font-weight:bold;
+}
+p span{
+  color:#3c98ff;
+  font-weight:bold;
+  font-size:15px;
+}
+p i{
+  font-size:18px;
+  color:#cd202d;
+}
+.skill{
+  text-align:center;
+  font-size:30px;
+  font-family: fantasy;
+  letter-spacing:1.5px;
+  padding:5px;
+  margin:10px 0;
+  font-weight:bold;
+}
+.skill i{
+  color:#3c98ff;
+}
+.Code{
+  text-align: center;
+  justify-content:space-evenly;
+  margin:20px;
+  margin-top:10px;
+  padding:40px;
+  padding-top:10px;
+  font-size:25px;
+  border-top-left-radius:20px;
+  border-bottom-right-radius:20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+.Code i{
+  font-size:40px;
+  color:#3c98ff;
+  margin:10px;
+  font-weight:normal;
+}
+.Code p{
+  font-size:17px;
+  font-family:'poppins',sans-serif;
+  font-weight:bold;
+}
+.txt{
+  text-align:center;
+  margin:5px;
+  padding:20px;
+  background:#e6f7ff;
+}
+.txt h3{
+  font-family:'Robot mono',monospace;
+}
+.txt p{
+  margin:5px;
+}
+.info{
+ // margin-tpp:20px;
+ background:#000;
+ margin:0;
+}
+.info h2 {
+  color:white;
+}
+.info h4{
+  color:#3c98ff;
+  font-size:15px;
+  letter-spacing:1px;
+  word-spacing:2px;
+  text-align: center;
+  margin-bottom:10px;
+  
+}
+.info h4 hr{
+  color:white;
+}
+.info i{
+  color:white;
+  //text-align: center;
+  font-size:32px;
+  margin-left:10px;
+  margin-right:5px;
+  padding-left:10px;
+  margin-bottom:0px;
+}
+.info a{
+  font-size:20px;
+  margin:5px;
+  color:white;
+  text-decoration:none;
+  font-family: fantasy;
+  margin-bottom:10px;
+}
+.info p{
+  font-size:20px;
+  margin:5px;
+  color:lightgreen;
+  text-decoration:none;
+  font-family: fantasy;
+  margin-bottom:0px;
+}
+.copy{
+  margin:5px;
+  padding:10px;
+  font-size:25px;
+  font-family:cursive;
+  color:#fff;
+  background:black;
+}
+table { 
+  border-collapse: collapse; 
+  align-items:center;
+  justify-content: center;
+  margin:30px 20px; 
+  text-align: center;
+} 
+td, th { 
+  border:1px solid #000000; 
+  padding: 5px;
+  font-size:15px;
+} 
+th { 
+  background-color: #2F5A78; 
+  color: #FFFFFF;
+}
+.ext{
+  background:#D3D3D3;
+}
+
+
+
+
+
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}</style></head> 
+ <body> 
+  <nav> 
+   <input type="checkbox" id="check"> <label for="check" class="checkbtn"> <i class="fas fa-bars"></i> </label> <label class="logo"><span>P</span>ortfol<span>io</span></label> 
+   <ul> 
+    <li><a class="active" href="#About">About</a></li> 
+    <li><a href="#Skill">Skill</a></li> 
+    <li><a href="#Project">Project</a></li> 
+    <li><a href="#Qualification">Qualification</a></li> 
+    <li><a href="#Contact">Contact</a></li> 
+   </ul> 
+  </nav> 
+  <h2 class="des">Hi I am <span>Nitin....</span></h2> 
+  <div class="about"> 
+   <div class="head"> <i class="fa-solid fa-user"></i> 
+    <h2 id="About">About me</h2> 
+   </div> 
+   <p><i class="fa-solid fa-quote-left"></i> I am <span>Nitin Saxena</span> Currently a BTech IIyr computer science and engineering student .A passionate Coder always try to push my coding skill up <i class="fa-solid fa-quote-right"></i> </p> 
+  </div> <!--Skills--> 
+  <h2 class="skill" id="Skill">Skills<i class="fa-solid fa-code"></i></h2> 
+  <div class="Code"> 
+   <h4><i class="fa-brands fa-java "></i>Java</h4> 
+   <p>Skill-Level:<span>Moderate</span></p> 
+   <hr> 
+   <br> 
+   <p>Java is my Favourite language, I know maximum all concepts of java including OOPs concepts</p> 
+  </div> 
+  <div class="Code"> 
+   <h4><i class="fa-solid fa-c"></i>Programming</h4> 
+   <p>Skill-Level:<span>Moderate-high</span></p> 
+   <hr> 
+   <br> 
+   <p>First Programming Language i start learning ,i am to good at it , maximum time use to solve problems</p> 
+  </div> 
+  <div class="Code"> 
+   <h4><i class="fa-brands fa-html5"></i>Html</h4> 
+   <p>Skill-Level:<span>Strong</span></p> 
+   <hr> 
+   <br> 
+   <p>Good Command in HTML , and i love it web development field </p> 
+  </div> 
+  <div class="Code"> 
+   <h4><i class="fa-brands fa-css3-alt"></i>Css</h4> 
+   <p>Skill-Level:<span>Moderate</span></p> 
+   <hr> 
+   <br> 
+   <p>Know most of the concepts,some are on the way ,love it to style projects that i made</p> 
+  </div> <!--Projects--> 
+  <h2 class="skill" id="Project">Project<i class="fa-solid fa-diagram-project"></i></h2> 
+  <div class="txt"> 
+   <h3>Some mini Projects i made during my learning:</h3> 
+   <hr> 
+   <br> 
+   <p><span>1:</span> Calculator <span>(using HTML , CSS , Js)</span></p> 
+   <p><span>2:</span> E-commerce Website design <span>(using HTML and Css)</span></p> 
+   <p><span>3:</span> Restaurant Website design <span>(using Html and Css)</span></p> 
+   <p><span>4:</span> Neumorphic, Glassomorphic and Normal login form <span>(Using HTML and Css)</span></p> 
+   <p><span>5:</span> Netflix clone <span>(Using HTML and Css)</span></p> 
+   <p><span>6:</span> Password Generator <span>(Using Java)</span></p> 
+   <p><span>7:</span> Number Guessing Game<span>(Using Java)</span></p> 
+  </div> <!--Qualificaltiom--> 
+  <h2 class="skill" id="Qualification">Qualification<i class="fa-solid fa-clipboard"></i></h2> 
+  <table id="tab"> 
+   <tbody>
+    <tr>
+     <th>Class/Course</th>
+     <th>Institute</th>
+     <th>Percentage%</th>
+    </tr> 
+    <tr class="ext">
+     <td>10th</td>
+     <td>Maharishi vidya mandir (CBSE)</td>
+     <td>77%</td>
+    </tr> 
+    <tr>
+     <td>12th</td>
+     <td>Maharishi vidya mandir (CBSE)</td>
+     <td>71%</td>
+    </tr> 
+    <tr class="ext">
+     <td>Btech(CSE Ist yr)</td>
+     <td>Aligarh College of engineering and technology (Aktu)</td>
+     <td>86%</td>
+    </tr> 
+   </tbody>
+  </table> 
+  <div class="info"> 
+   <h2 class="skill" id="Contact">Contact<i class="fa-regular fa-address-card"></i></h2> 
+   <h4> Get in touch</h4> 
+   <br> <i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/nitin-saxena-78a976294?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app">LinkedIn</a> 
+   <br> 
+   <br> <i class="fa-brands fa-github"></i><a href="https://github.com/Nitin10cd">Github</a> 
+   <br> 
+   <br> 
+   <p><i class="fa-solid fa-envelope"></i> nsaxenacse@gmail.com</p> 
+   <h4 class="copy">Copyright|©Nitin Saxena</h4> 
+  </div> 
+ 
+</body></html>
